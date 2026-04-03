@@ -1,0 +1,61 @@
+#menu-bar {
+    display: none;
+    
+}
+header label {
+/*el label del header es el que tiene el icono del menu*/
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+    
+}
+
+.menu {
+    position: absolute;
+/*top y left para que el menu aparesca debajo de header*/
+    top: 0;
+    left: 0;
+    width: 100%;
+/*100vh para que siempre ocupe el 100% del alto de la ventana*/
+    height: 100vh;
+    background: rgba(51,51,51,0.9);
+    transition: all 0.5s;
+/*el transform -100% hace desaparecer el menu-bar*/
+    transform: translateX(-100%);
+}
+/*doy formato a las a del menu que estan en index*/
+.menu a {
+    display: block;
+    color: #fff;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+/*doy un hover para que cuando pase el mouse por el menu cambie el colorde fondo*/
+.menu a:hover {
+    background: rgba(255,255,255,0.3);
+}
+/*con el transform 0% hago que cuando pulse en el checkbox del input en index.html aparesca o desaparesca el menu del menu-bar*/
+#menu-bar:checked ~ .menu {
+    transform: translateX(0%);
+}
+/*comienzo a hacer responsive en escritorio el menu va a cambiar su presentacion a horizontal*/
+@media (min-width: 1024px) {
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    .menu a {
+        border: none;
+    }
+/*quito el boton del menu ya que es para moviles*/
+    header label {
+        display: none;
+    }
+}

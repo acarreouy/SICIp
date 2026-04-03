@@ -1,0 +1,104 @@
+/*Aplicamos una fuente importada de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*voy a importar el estilo del menu y el banner*/
+@import url(menu.css);
+@import url(banner.css);
+@import url(blog.css);
+@import url(info.css);
+@import url(estilo_graf_aut.css);
+@import url(estilo_graf_tipo.css);
+@import url(estilo_graf_redes.css);
+@import url(estilo_graf_Bradf.css);
+
+/*Primero damos un estilo general quitando margen, padding y un box-sizing, para que cuando demos margen o padding sea siempre en el mismo modelo de caja y no se expanda*/
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+/*Integramos la fuente*/
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    width: 100%;
+    height: 50px;
+    background: #333;
+    color: #fff;
+/*hago que el menu quede pegado*/
+    position: fixed;
+    top: 0;
+    left: 0;
+/*z-index de 100 para que este siempre delante de los demas elementos, de modo que el header sea quien tapa a los demas elementos*/
+    z-index: 100;
+    }
+/*damos formato a los contenedores, para que siempre este alineada la pagina de forma responsiva*/
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    margin: auto;
+}
+.destacado {
+  margin-left: 2em;
+}
+h1 {
+    float: left;
+}
+h2 {
+   text-align: center;
+}
+h3 {
+   text-align: justify;
+}
+/*limpio la flotacion del contenedor para que llegue hasta el final de la pagina*/
+header .contenedor {
+    display: table;    
+}
+/*doy formato a la seccion para que si hay mas contenido jale hacia arriba*/
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+#bienvenidos {
+text-align: center;
+}
+#botones {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+.copy {
+    font-size: 20px;
+}
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+.sociales a {
+    color: #333;
+    text-decoration: none;
+}
+/*hago el footer responsive*/
+@media (min-width: 768px) {
+    .sociales {
+        width: auto;
+    }
+    footer .contenedor {
+        justify-content: space-between;
+    }
+}
+    
+@media (min-width: 1024px){ 
+    .contenedor {
+        width: 1000px;
+    }
+        }
+}

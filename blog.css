@@ -1,0 +1,19 @@
+#blog h3, h4 {
+    text-align: center;
+}
+#blog .contenedor {
+/*display flex para que la imagenes esten en una sola linea*/
+    display: flex;
+    justify-content: center;
+/* flex-wrap: wrap es para que si hay elementos que no caben en la pantalla vayan hacia abajo*/
+    flex-wrap: wrap;
+}
+#blog article {
+    margin: 15px;
+    
+    width: 
+}
+#blog img {
+    width: 100%;
+    max-width: 200px;
+}
