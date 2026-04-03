@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 320px; 
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container {
+    height: 500px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+#csv {
+    display: none;
+}
+
+		</style>
+	</head>
+	<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/sankey.js"></script>
+<script src="Graficas/code/modules/dependency-wheel.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Chart showing a dependency wheel, where each point consists of multiple
+        weighted links to other points. This chart type is often used to
+        visualize data flow, and can be a striking way to illustrate
+        relationships in data.
+    </p>
+</figure>
+
+
+
+		<script type="text/javascript">
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Highcharts Dependency Wheel'
+    },
+
+    accessibility: {
+        point: {
+            valueDescriptionFormat: '{index}. From {point.from} to {point.to}: {point.weight}.'
+        }
+    },
+
+    series: [{
+        keys: ['from', 'to', 'weight'],
+        data: [
+            ['Alemán', 'Capítulo', 6],
+            ['Español', 'Artículo', 564],
+            ['Español', 'Capítulo', 246],
+            ['Español', 'Conferencia', 36],
+            ['Español', 'Documento jurídico', 16],
+            ['Español', 'Informe', 25],
+            ['Español', 'Libro', 671],
+            ['Español', 'Otros', 25],
+            ['Español', 'Página Web', 87],
+            ['Español', 'Tesis de grado', 5],
+            ['Español', 'Tesis de post-grado', 35],
+            ['Francés', 'Artículo', 10],
+            ['Francés', 'Capítulo', 7],
+            ['Francés', 'Conferencia', 1],
+            ['Francés', 'Libro', 45],
+            ['Francés', 'Otros', 1],
+            ['Francés', 'Tesis de post-grado', 1],
+            ['Inglés', 'Artículo', 864],
+            ['Inglés', 'Capítulo', 139],
+            ['Inglés', 'Conferencia', 11],
+            ['Inglés', 'Informe', 6],
+            ['Inglés', 'Libro', 303],
+            ['Inglés', 'Otros', 4],
+            ['Inglés', 'Página Web', 26],
+            ['Inglés', 'Tesis de grado', 1],
+            ['Inglés', 'Tesis de post-grado', 6],
+            ['Italiano', 'Libro', 1],
+            ['Portugués', 'Artículo', 355],
+            ['Portugués', 'Capítulo', 104],
+            ['Portugués', 'Conferencia', 4],
+            ['Portugués', 'Documento jurídico', 12],
+            ['Portugués', 'Libro', 178],
+            ['Portugués', 'Otros', 5],
+            ['Portugués', 'Página Web', 10],
+            ['Portugués', 'Tesis de grado', 1],
+            ['Portugués', 'Tesis de post-grado', 24],
+            ['Portugués', 'Tesis de post-doctorado', 24],
+        ],
+        type: 'dependencywheel',
+        name: 'Dependency wheel series',
+        dataLabels: {
+            color: '#333',
+            textPath: {
+                enabled: true,
+                attributes: {
+                    dy: 5
+                }
+            },
+            distance: 10
+        },
+        size: '95%'
+    }]
+
+});
+
+		</script>
+	</body>
+</html>

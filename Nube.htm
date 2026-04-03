@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+        <a href="">Excel</a>
+        <a href="">Pdf</a>
+    </nav>    
+    </div>
+</header>
+<main>
+    <section>
+    <body>
+	<br><br>
+    <div class="contenedor">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 420px; 
+    max-width: 900px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 0px auto;
+	text-align: center;
+	width: 100%;
+	max-width: 800px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 800px;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+		</style>
+	</head>
+	<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/wordcloud.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+<div id="container"></div>
+    <p class="highcharts-description">
+        Nube de palabras en la que se visualiza la frecuencia de aparición de las palabras clave de los artículos entre 2015-2020.
+    </p>
+</figure>
+
+
+
+		<script type="text/javascript">
+var text = 'Timidez; bienestar psicológico; uso problemático de Internet; género, Sistema unico de salud; atención primaria; agentes comunitarios de salud; vih/sida, Prejuicio; caballerosidad; roles de género; autoritarismo, Niños; vulnerabilidad; amparo institucional; profesionales, Apego adulto; parental bonding instrument; análisis factorial, Prácticas sexuales; liberalismo sexual; sexualidad; escala, Cuestionario de agresión; Buss-Perry; estructuras factoriales; modelo jerárquico, Gestión conocimiento; cultura organizacional; empresa pública; Uruguay, Osteossarcoma; salud mental; psicología, Cuidado paliativo; equipo multiprofesional; hospital, Motivación; joven aprendiz; trabajo, Jóvenes; subjetividad; papel del otro; vulnerabilidad social, Narcisismo; Instagram; autoestima; moderación, Aprendizaje organizacional; pensamiento sistémico; sistemas complejos, Tabaquismo; salud mental; comorbilidad; uso de tabaco, Feminismo; activismo juvenil; identidad; narrativa, Sentido de justicia; criterios de justicia; igualdad; psicología del desarrollo, Mindfulness; sintomatología ansiosa; trastorno de ansiedad; población infanto-juvenil, Enfermería; trabajo; psicoanálisis; salud laboral, Apego adulto; éxito en la carrera; autoeficacia; satisfacción con la vida, Competencia digital; personas mayores; TIC; políticas, Red de salud mental; drogas; atención psicosocial; familia, Pobreza; bienestar; comunidad rural, Adaptación; escala; validacion de test; altruísmo, Procrastinación; motivación; lectura, Psicología positiva; la escuela; adolescentes, Teoría del actor-red; anonimato; pedagogía Waldorf; dispositivo clínico, Género; prisión; encarcelamiento; revisión sistemática, Marx; Hegel; Feuerbach; subjetividad, Consentimiento informado; ética; investigación cualitativa; Psicología social comunitaria, Cognición; política ontológica; psicología; relaciones intercientíficas, Infancia temprana; neurociencia; análisis de discurso; género, Enfoque CTS; psicología; afrocentricidad; salud, Instrumentos de gestión; subjetividad laboral; capitalismo académico, Dispositivos clínicos; producción de la subjetividad; teoría de la red de actores; epistemología y pólítica, Prácticas sexuales; liberalismo sexual; sexualidad; escala, Cuerpo; afectos; secreto; nombres ficticios, Ética; enación; heteronormatividad; escuela, Prácticas Psi; etnografía; cibercultura; Facebook, Sordos; oyentes; mundo común; pluriverso, Salud mental; agrupación de familiares; biosocialidad; ciudadanía neuroquímica, Evaluación de la tecnología; política de la salud; salud digital; telemedicina, Psicología social; clínica social; teoría actor-red; cuidado, Ciencia abierta; replicación; crisis; performatividad, Método TAR; traducciones; negociaciones; afectaciones, Embarazo; aborto; juventud; adolescencia, Transición a la vida adulta; jóvenes en privación de libertad; trayectorias de vida; desigualdad soc, Comprensión lectora; estudiantes universitarios; funciones ejecutivas; regulación emocional, Psicofármacos; prácticas psicológicas; gubernamentalidad, Pensamiento social; redes sociales; jóvenes; ocupación, Representaciones Sociales; cocaína (crack); hospitalización; mujeres, Autismo; MOOC; inclusión; terminología, Depresión; ideación suicida; suicidio; violencia de pareja, Alcohol; estudiantes universitarios; mujeres; representaciones sociales, Ciencia Cognitiva de la Religión; ideas religiosas; rituales religiosos; memoria, Ancianos; suicidio; tentativa de suicidio, Cartografía; investigación; psicología, Hipótesis monoaminérgica, Herramienta terapéutica, Experiencia, Contexto, Psiquiatría, Medicalización, Infancia, Desviación, Psicofármacos, Neoliberalismo, Estado subsidiario, Chile, Ritalina, Biotecnologias, Medicamentos psicotrópicos, Cartografia das controvérsias, Medicalización, Biopolítica, TDAH, Redes Sociales, Centro de protección, Psicofármacos, Subjetividad, Dispositivo, Demencia, Enfermedad de Alzheimer, Psicofármacos, Tratamiento, Posthumanismos, Entramados farmacológicos, Niñas y niños, Psicoestimulantes, Psicotrópicos, Salud mental, Benzodiazepínicos, Clonazepam, Farmacologización, Psicofármacos, Diagnósticos, Psiquiatría, Paradigmas, Psicofarmacología, Órgano-dinamismo, Internalización, Dialéctica, Teoría histórico-cultural, Epistemología, Candidatas, Método experimental, Estereotipos de género, Actitudes, Cooperativismo, Políticas habitacionales, Autogestión, Experiencia fuera del cuerpo, Transliminalidad, Límites finos, Experiencias anómalas, Psicología social comunitaria, Hábitat popular, Historicidad, Territorialidad, Apoyo Social, Hospital de Día, Psiquiatría Comunitaria, Salud Mental, Aprendizaje basado en proyectos, Impresoras 3D, Motivación, Aprendizaje significativo, Prisión, Paternidad, Investigación Cualitativa, Metodología, Vejez, Sexualidad, Vejez LGBT, Gubernamentalidad, Racionalidades Políticas, Niñez y Adolescencia, Situación de calle, Ruralidades, Psicología, Psicología Histórico-Cultural, Aprendizaje, Docente, Innovación, TIC , Capital informacional, Inclusión digital, Conocimiento digital, Ciudadanía informacional, Plan CEIBAL, familias, desigualdad, inclusión social , Jóvenes, Computadoras, Apropiación, Uso, Formación inicial docente, Competencia digital docente, TIC, Pedagogía, Programa Conectar Igualdad, Capitalismo informacional, Materialismo cognitivo, Inclusión digital, Brecha Digital, Brecha Digital de Género, TIC, Feminismo, Personas mayores, Tecnologías digitales, Envejecimiento, Inclusión digital, tecnologías digitales, inclusión digital, trastorno del espectro autista, tecnologías móviles, adultos mayores cuidadores; sobrecarga; codependencia, Sexualidad; Autismo; Cuidadores, Contraste ideológico; Autoritarismo del ala de derecha; Dominancia social; Ideología Política, Habla Privada, Resolución de problemas, Lenguaje y Pensamiento , Violencia de género;Estrategias de afrontamiento;Apoyo social, funcionamiento psíquico; formulación psicodinámica; epoc avanzado, género; cuidados; análisis de discurso, Personalidad, Psicometría, Evaluación Psicológica, Temperamento, Carácter, g0y; homo erotismo; heteroflexible; masculinidad, Trabajo; hipermodernidad; fragmentación, Trabajo; reconocimiento; cuerpos, Hipermodernidad, Sufrimiento Laboral, Call Centers, Ser universitario, construcción identitaria, sujetos, instituciones, Investigación, grupalidad, producción de conocimiento, Enseñanza universitaria, texto académico, Intimidad, parejas, transformaciones culturales, Chile, Afrodescendencia, desigualdad, políticas culturales, racismo, Violencia, adulto mayor, sociología clínica, hipermodernidad, Tiempo, espacio, hipermodernidad, cambio, Sujeto, hipermodernidad, Psicoanálisis, Freud, hipermodernidad, Hipermodernidad, arte, internet, comunicación poética, Lenguaje, acción, comunicación, racionalidades, Hipermodernidad, desarrollo sostenible, cambio civilizatorio, Violencia, Industria Cultural, Discurso Capitalista, Psicólogos, Uruguay, Profesión, Salud Pública, Acontecimiento, Invención, Programa Maestros Comunitarios, Conflicto social, Conflicto sociocognitivo, Interacción sociocognitiva, Intersubjetividad, Salud mental, Atención Psicológica, Terapia Cognitivo-Comportamental, Estudiantes Universitarios, Psicología social comunitaria, Prácticas en comunidad, Intervención comunitaria, Cáncer de próstata, Incontinencia, Disfunción eréctil, Construcción social de la masculinidad, Habilidades digitales, Nativos digitales, Comprensión lectora, Teoría crítica, Teoría marxista, Althusser, Investigación cualitativa, Narrativa, TDAH, Trabajo comunitario, participación, construido en común, Habitar colectivo, inclusión social, dispositivo residencial, Sindicalismo, interseccionalidad, trabajadoras del hogar y del cuidado, Interdisciplina-praxis, diálogo transformador, Comunidad, interdependencia, política de la diferencia, Pobreza, psicología comunitaria, políticas públicas, formación, Psicología comunitaria, acción prefigurativa, comunidad contestada, metáfora ecológica, Praxis, psicología comunitaria, valores, academia, Crisis 2002 Uruguay, psicología social comunitaria en movimiento, sentido político de las prácticas, Formación en psicología social comunitaria, modelo pedagógico, diálogo de saberes, Psicología social comunitaria, inferioridad, derechos colectivos, epistemología, Psicología comunitaria, acompañamiento, cuidado de equipos, violencia, Participación comunitaria, dimensiones, aproximaciones, retos.';
+var lines = text.split(/[;\., ]+/g),
+    data = Highcharts.reduce(lines, function (arr, word) {
+        var obj = Highcharts.find(arr, function (obj) {
+            return obj.name === word;
+        });
+        if (obj) {
+            obj.weight += 1;
+        } else {
+            obj = {
+                name: word,
+                weight: 1
+            };
+            arr.push(obj);
+        }
+        return arr;
+    }, []);
+
+Highcharts.chart('container', {
+    accessibility:
+					{
+        screenReaderSection: {
+            beforeChartFormat: '<h5>{chartTitle}</h5>' +
+                '<div>{chartSubtitle}</div>' +
+                '<div>{chartLongdesc}</div>' +
+                '<div>{viewTableButton}</div>'
+        }
+    },
+    series: [{
+        type: 'wordcloud',
+        data: data,
+        name: 'Occurrences',
+		maxFontSize: 100,
+		minFontSize: 10
+    }],
+    title: {
+        text: 'Nube de palabras clave'
+    }
+});
+		</script>
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>

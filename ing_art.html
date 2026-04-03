@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ingreso de autores</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+<div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+<!---BUscador---->
+        <a>
+        <form action="buscar.php" method="post">
+            <input type="text" name="criterio" placeholder="Criterio de búsqueda">
+            <input type="submit" name="name" value="buscar">
+        </form>
+        </a>
+<!--Fin busca-->
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+        
+    </nav>    
+</div>
+</header>
+<main>
+    <section>
+    <body>
+    <div class="contenedor">
+    <br><br>
+<link rel="stylesheet" href="css/estilo-form.css">
+    </head>
+	
+<form id="form_articulo" action="formu4.php" method="post" class="form-register">
+<br><br><br><br>
+<h1 class="form-titulo">Agrege un artículo</h1>
+<div class="contenedor-inputs">
+<p>Tipo de artículo:<br>
+    <input id="Tipo_Art" type="radio" name="Tipo_Art" value="Trabajo original"> Trabajo original
+    <input id="Tipo_Art" type="radio" name="Tipo_Art" value="Revisiones"> Revisiones
+    <input id="Tipo_Art" type="radio" name="Tipo_Art" value="Comunicaciones"> Comunicaciones
+<br>Idioma del artículo:<br>
+  <input id="Idioma_Articulo" type="radio" name="Idioma_Articulo" value="Español"> Español
+  <input id="Idioma_Articulo" type="radio" name="Idioma_Articulo" value="Portugués"> Portugués
+  <input id="Idioma_Articulo" type="radio" name="Idioma_Articulo" value="Inglés"> Inglés
+</p>
+<input id="Cantidad_Autores" type="text" name="Cantidad_Autores" placeholder="Cantidad_Autores" title="Cantidad_Autores" required=""  class="input-48">
+<input id="Autor1" type="text" name="Autor1" placeholder="Id del autor" title="Autor1" class="input-48">
+<input id="Autor2" type="text" name="Autor2" placeholder="Segundo autor" title="Autor2" class="input-48">
+<input id="Autor3" type="text" name="Autor3" placeholder="Otro autor" title="Autor3" class="input-48">
+<input id="Autor4" type="text" name="Autor4" placeholder="Otro autor" title="Autor4" class="input-48">
+<input id="Autor5" type="text" name="Autor5" placeholder="Otro autor" title="Autor5" class="input-48">
+<input id="Autor6" type="text" name="Autor6" placeholder="Otro autor" title="Autor6" class="input-48">
+<input id="Autor7" type="text" name="Autor7" placeholder="Otro autor" title="Autor7" class="input-48">
+<input id="Autor8" type="text" name="Autor8" placeholder="Otro autor" title="Autor8" class="input-48">
+<input id="Autor9" type="text" name="Autor9" placeholder="Otro autor" title="Autor9" class="input-48">
+<input id="Autor10" type="text" name="Autor10" placeholder="Otro autor" title="Autor10" class="input-48">
+<input id="Titulo_Articulo" type="text" name="Titulo_Articulo" placeholder="Titulo_Articulo" title="Ingresar título" required="" class="input-100">
+<input id="Cantidad_Referencias" type="text" name="Cantidad_Referencias" placeholder="Cantidad_Referencias" title="Cantidad_Referencias" required="" class="input-48">
+<input id="Direccion_Web" type="text" name="Direccion_Web" placeholder="Direccion_Web" title="Direccion_Web" class="input-100">     <input id="Id_Revista" type="text" name="Id_Revista" placeholder="Id_Revista" title="Id_Revista" class="input-48">
+<input id="Tema" type="text" name="Tema" placeholder="Temas separados con coma" title="Tema" class="input-100">
+<input id="submit" type="submit" name="submit" value="Enviar" class="btn-enviar">
+<input type="reset" value="Borrar" class="btn-enviar">
+ </div>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </form>
+    </head>
+</body>
+</html>

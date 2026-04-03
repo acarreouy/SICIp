@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AUTO CITACIONES</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+        
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+
+	<style type="text/css">
+#container {
+    height: 400px; 
+}
+
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 310px; 
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+	font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+		</style>
+	</head>
+		<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/series-label.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        3837 citas brindadas por la revista, 334 son autocitas, lo que corresponde al 8.7 %. Sobre un total de 313 autores, 110 realizan autocitas, constituyéndose como el 35 % de los autores.
+    </p>
+</figure>
+
+
+	<script type="text/javascript">
+        Highcharts.chart('container', {
+    chart: {
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Vida media de las referencias y su perdida de utilidad en cada año'
+    },
+    subtitle: {
+        text: '2015-2020'
+    },
+    xAxis: [{
+        categories: ['2015', '2016', '2017', '2018', '2019', '2020'],
+        crosshair: true
+    }],
+    yAxis: [{ // Primary yAxis
+        labels: {
+            format: '{value} %',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        },
+        title: {
+            text: '% de autores que se autocitan',
+            style: {
+                color: Highcharts.getOptions().colors[1]
+            }
+        }
+    }, { // Secondary yAxis
+        title: {
+            text: 'Cantidad de referencias',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        labels: {
+            format: '{value} Ref.',
+            style: {
+                color: Highcharts.getOptions().colors[0]
+            }
+        },
+        opposite: true
+    }],
+    tooltip: {
+        shared: true
+    },
+   // legend: {
+     //   layout: 'vertical',
+       // align: 'left',
+        //x: 50,
+        //verticalAlign: 'top',
+        //y: 0,
+        //floating: true,
+        //backgroundColor:
+          //  Highcharts.defaultOptions.legend.backgroundColor || // theme
+            //'rgba(255,255,255,0.25)'
+//    },
+             series: [{
+                  yAxis: 1,
+        type: 'column',
+        name: 'Referencias',
+        data: [724, 621, 481, 691, 590, 730]
+    }, {
+         yAxis: 1,
+        type: 'column',
+        name: 'Auto-referencias',
+        data: [102, 37, 19, 47, 41, 88]
+    }, {
+        },{
+        name: '% de autores',
+        type: 'spline',
+        data: [58, 37.5, 24, 39, 27, 31],
+        tooltip: {
+            valueSuffix: '%'
+    }    
+
+        }]
+});
+		</script>
+	</body>
+</html>

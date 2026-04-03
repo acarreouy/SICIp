@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Colaboración</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+        
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+	<br><br>
+		
+		
+	</head>
+	<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/networkgraph.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Observamos la red de colaboración que se establecen entre paises con autoria compartida.
+    </p>
+</figure>
+
+
+
+		<script type="text/javascript">
+// Agregue la opción de nodos a través de una llamada de evento. Queremos empezar con el padre
+// elemento y aplicar colores separados a cada elemento hijo, luego el mismo color a
+// nietos.
+Highcharts.addEvent(
+    Highcharts.Series,
+    'afterSetOptions',
+    function (e) {
+        var colors = Highcharts.getOptions().colors,
+            i = 0,
+            nodes = {};
+
+        if (
+            this instanceof Highcharts.seriesTypes.networkgraph &&
+            e.options.id === 'lang-tree'
+        ) {
+            e.options.data.forEach(function (link) {
+
+                if (link[0] === 'Uruguay') {
+                    nodes['Uruguay'] = {
+                        id: 'Uruguay',
+                        marker: {
+                            radius: 20
+                        }
+                    };
+                        nodes[link[1]] = {
+                        id: link[1],
+                        marker: {
+                            radius: 10
+                        },
+                        color: colors[i++]
+                    };
+                } else if (nodes[link[0]] && nodes[link[0]].color) {
+                    nodes[link[1]] = {
+                        id: link[1],
+                        color: nodes[link[0]].color
+                                            
+                    };
+                }
+            });
+
+            e.options.nodes = Object.keys(nodes).map(function (id) {
+                return nodes[id];
+            });
+        }
+    }
+);
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'networkgraph',
+        height: '60%'
+    },
+    title: {
+        text: 'Red de colaboración en la revista PCS'
+    },
+    subtitle: {
+        text: '2015-2020'
+    },
+    plotOptions: {
+        networkgraph: {
+            keys: ['from', 'to'],
+            layoutAlgorithm: {
+                enableSimulation: true,
+                friction: -0.9
+            }
+        }
+    },
+    series: [{
+        dataLabels: {
+            enabled: true,
+            linkFormat: ''
+        },
+        id: 'lang-tree',
+        data: [
+            ['Uruguay', 'Chile'],
+            ['Uruguay', 'Noruega'],
+            ['Uruguay', 'España'],
+            ['Uruguay', 'Argentina'],
+            ['Uruguay', 'Estados Unidos'],
+            //['Perú', 'a'],
+            //['Inglaterra', 'b'],
+            //['Puerto Rico', 'c'],
+            //['Pakistán', 'd'],
+            //['Venezuela', 'e'],
+            //['Canadá', 'f'],
+            //['Países Bajos', 'g'],
+                                  
+            // Leaves:
+            ['Brasil', 'Ecuador'], 
+            ['España', 'Brasil'],
+            ['España', 'Brasil'],
+            
+            
+        ]
+    }]
+});
+
+		</script>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Autoría de los artículos</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+       
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+		</head>
+	<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/series-label.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Sobre un total de 140 artículos, observamos 57 artículos con autoría individual, y 83 con autoría múltiple. Si bien los primeros dos años observamos una autoría individual mayor, a partir del 2017 se comienza a observar una tendencia hacía un predominio de la autoría múltiple. Con un promedio de 2.3357 autores por artículo.
+    </p>
+</figure>
+
+
+
+		<script type="text/javascript">
+Highcharts.chart('container', {
+    title: {
+        text: 'Distribución de la autoría por año 2015-2020'
+    },
+    xAxis: {
+        categories: ['2015', '2016', '2017', '2018', '2019', '2020']
+    },
+    labels: {
+        items: [{
+            html: '',
+            style: {
+                left: '50px',
+                top: '18px',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'black'
+            }
+        }]
+    },
+    series: [{
+        type: 'column',
+        name: 'Autoria individual',
+        data: [10, 20, 7, 11, 5, 4]
+    }, {
+        type: 'column',
+        name: 'Autoria múltiple',
+        data: [8, 5, 11, 11, 22, 26]
+    }, {
+        type: 'spline',
+        name: 'Promedio',
+        data: [9, 12.5, 9, 11, 13.5, 15],
+        marker: {
+            lineWidth: 2,
+            lineColor: Highcharts.getOptions().colors[3],
+            fillColor: 'white'
+        }
+    }, {
+        type: 'pie',
+        name: 'Total',
+        data: [{
+            name: 'Autoría individual',
+            y: 57,
+            color: Highcharts.getOptions().colors[0] // Jane's color
+        }, {
+            name: 'Autoría múltiple',
+            y: 83,
+            color: Highcharts.getOptions().colors[1] // John's color
+        }],
+        center: [400, 50],
+        size: 100,
+        showInLegend: false,
+        dataLabels: {
+            enabled: false
+        }
+    }]
+});
+
+		</script>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>

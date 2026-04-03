@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Firmas</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+        
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+	<br><br><br><br>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Se agrupan la cantidad de firmas en columnas subdivididas por el año de publicación.
+    </p>
+</figure>
+		<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Distribución de firmas por año'
+    },
+    xAxis: {
+        categories: ['1 Firma', '2 Firmas', '3 Firmas', '4 Firmas', '5 Firmas', '6 Firmas', '8 Firmas', '9 Firmas']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Porcentaje de firmas'
+        }
+    },
+    tooltip: {
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+        shared: true
+    },
+    plotOptions: {
+        column: {
+            stacking: 'percent'
+        }
+    },
+    series: [{
+        name: '2015',
+        data: [10, 4, 9, 8, 5, null, null, null]
+    }, {
+        name: '2016',
+        data: [20, 8, null, 4, null, null, 1, null]
+    }, {
+        name: '2017',
+        data: [7, 10, 9, 8, null, null, 8, null]
+    }, {
+        name: '2018',
+        data: [11, 14, 6, 8, null, null, null, null]
+    }, {
+        name: '2019',
+        data: [5, 16, 21, 16, 5, 6, null, 9]
+    }, {
+        name: '2020',
+        data: [4, 18, 12, 16, 30, 12, 8, null]
+    }, ]
+});
+        </script>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>

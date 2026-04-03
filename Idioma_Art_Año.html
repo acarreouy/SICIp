@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tipo de artículos</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+        
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+
+	</head>
+	<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/series-label.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Cantidad de artículos, según el tipo. Sobre un total de 140 artículos encontramos: 41 revisiones y 99 trabajos originales, en 5 años, dondé se publicaron 13 números.
+    </p>
+</figure>
+		<script type="text/javascript">
+Highcharts.chart('container', {
+
+    title: {
+            text: 'Artículos publicados según el idioma por año', // título
+            x: -20 
+        },
+        subtitle: {
+            text: 'Año 2015-2020', // subtítulo
+            x: -20
+        },
+        xAxis: {
+            categories: ['2015', '2016', '2017', '2018', '2019', '2020'] // categorías
+        },
+        yAxis: {
+            title: {
+                text: 'Cantidad de artículos' // nombre del eje de Y
+            },
+            plotLines: [{
+                color: '#808080' 
+            }]
+        },
+        tooltip: {
+            valueSuffix: ' Artículos' // el sufijo de la información presente en el "tooltip"
+        },
+        legend: { // configuración de la leyenda
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom',
+            borderWidth: 1
+        },
+       series: [{
+        name: 'Español',
+        data: [16, 21, 15, 15, 14, 9]
+    }, {
+        name: 'Inglés',
+        data: [1, 1, 1, 2, 1, 5]
+    }, {
+        name: 'Portugués',
+        data: [1, 3, 2, 5, 12, 16]
+    }],
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+		</script>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>

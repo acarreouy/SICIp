@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Autores por tipo de artículos</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+       
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+		</head>
+	<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/highcharts-3d.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Sobre un total de 316 firmas, tenemos 223 en trabajos originales y 93 en revisiones.
+    </p>
+</figure>
+
+
+		<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45,
+            beta: 0
+        }
+    },
+    title: {
+        text: 'Porcentaje de autores por tipo de artículo 2015-2020'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            depth: 35,
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}'
+            }
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: 'Autores',
+        data: [
+            ['Revisiones 29.4%', 93],
+            {
+        name: 'Trabajos originales 70.6%',
+                y: 213,
+                sliced: true,
+                selected: true,
+        },
+            ]
+    }]
+});
+		</script>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>

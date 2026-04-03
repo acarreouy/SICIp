@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Idiomas</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+        
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+	<br><br><br><br>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Se agrupan los artículos en columnas por tipo subdivididas por el idioma de los mismos.
+		Podemos observar que en los tres idiomas son preponderantes los trabajos originales, sobre las revisiones.
+    </p>
+</figure>
+		<script type="text/javascript">
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Idioma de los artículos'
+    },
+    xAxis: {
+        categories: ['Español', 'Portugués', 'Inglés']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total de artículos'
+        }
+    },
+    tooltip: {
+        pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+        shared: true
+    },
+    plotOptions: {
+        column: {
+            stacking: 'percent'
+        }
+    },
+    series: [{
+        name: 'Trabajos originales',
+        data: [58, 30, 7]
+    }, {
+        name: 'Revisiones',
+        data: [27, 9, 4]
+    }]
+});
+        </script>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>

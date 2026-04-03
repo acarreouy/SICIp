@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ingreso de autores</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+    <h1 class="icon-gauge">Estudio sobre PCS</h1>
+        <input type="checkbox" id="menu-bar">
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+<!---BUscador---->
+        <a>
+       <form action="buscar.php" method="post">
+            <input type="text" name="criterio" placeholder="Criterio de búsqueda">
+            <input type="submit" name="name" value="buscar">
+        </form>
+        </a>
+<!--Fin busca-->
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+    
+    </nav>    
+    </div>
+</header>
+<main>
+    <section>
+    <body>
+    <div class="contenedor">
+    <link rel="stylesheet" href="css/estilo-form.css">
+    <br><br>
+<!------------- Fin -------------------------------------------------->
+<title>Autores</title>
+<!----creamos class para dar formato desde el estilo-form.css---------->
+<form id="form_autores" action="formu3.php" method="post" class="form-register">
+<br><br><br><br>
+<h1 class="form-titulo">Agrege un autor</h1>
+<br><br>
+<div class="contenedor-inputs">
+<legend>Seleccione el país: </legend><select name="Pais" size="3">
+					<option value="Uruguay">Uruguay</option>
+					<option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+					<option value="España">España</option>
+					<option value="Estados Unidos">Estados Unidos</option>
+					<option value="México">México</option>
+					<option value="Guatemala">Guatemala</option>
+					<option value="Honduras">Honduras</option>
+					<option value="El Salvador">El Salvador</option>
+					<option value="Venezuela">Venezuela</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Cuba">Cuba</option>
+					<option value="Bolivia">Bolivia</option>
+					<option value="Perú">Perú</option>
+					<option value="Ecuador">Ecuador</option>
+					<option value="Paraguay">Paraguay</option>
+					<option value="Pakistán">Pakistán</option>
+					<option value="Chile">Chile</option>
+					<option value="Inglaterra">Inglaterra</option>
+					<option value="Puerto Rico">Puerto Rico</option>
+    </select>
+<p class="input-48"><legend>Sexo:</legend>
+			<input id="Sexo" type="radio" name="Sexo" value="F"/>Femenino
+			<input id="Sexo" type="radio" name="Sexo" value="M"/>Masculino
+</p>
+	<input id="Apellido" type="text" name="Apellido" placeholder="Apellido/s" title="Ingresar apellido" required="" class="input-48"><br>
+	<input id="NombreCompleto" type="text" name="NombreCompleto" placeholder="NombreCompleto" title="NombreCompleto" required="" class="input-48"><br>
+	<input id="Siglas" type="text" name="Siglas" placeholder="Siglas del Nombre" title="Siglas del Nombre" required="" class="input-48">
+	<input id="Afiliacion" type="text" name="Afiliacion" placeholder="Institución a la que pertenece" title="Ingresar nombre de la institución" required="" class="input-100">
+	<input id="FechaDeNacimiento" type="text" name="FechaDeNacimiento" placeholder="Si la conoce ingrese la Fecha de nacimiento" title="FechaDeNacimiento" class="input-48">
+	<input id="Orcid" type="text" name="Orcid" placeholder="Si lo conoce ingrese el Orcid" title="Orcid" class="input-48">
+	<input id="mail" type="email" name="mail" placeholder="Correo electrónico" title="mail" class="input-48">
+	<br>
+<input id="submit" type="submit" name="submit" value="Enviar" class="btn-enviar">
+<input type="reset" value="Borrar" class="btn-enviar">
+    </div>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </form>
+    </head>
+</body>
+</html>

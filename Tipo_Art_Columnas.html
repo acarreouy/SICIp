@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Autores por genero</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/estilos.css">
+<header>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+ <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+        <a href="http://localhost/Base_php">Inicio</a>
+		<a href="http://localhost/Base_php/Graficas.html">Graficas</a>
+       
+    </nav>    
+    </div>
+</header>
+<main>
+<br><br><br>
+    <section>
+    <body>
+    <div class="contenedor">
+		</head>
+	<body>
+<script src="Graficas/code/highcharts.js"></script>
+<script src="Graficas/code/modules/series-label.js"></script>
+<script src="Graficas/code/modules/exporting.js"></script>
+<script src="Graficas/code/modules/export-data.js"></script>
+<script src="Graficas/code/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Sobre un total de 313 autores, observamos 180 mujeres, el 57.5 % y 133 varones, el 42.5 %. 
+    </p>
+</figure>
+
+
+
+		<script type="text/javascript">
+Highcharts.chart('container', {
+    title: {
+        text: 'Género de los autores por paises 2015-2020'
+    },
+    xAxis: {
+        categories: ['2015', '2016', '2017', '2018', '2019', '2020']
+    },
+    labels: {
+        items: [{
+            html: '',
+            style: {
+                left: '50px',
+                top: '18px',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'black'
+            }
+        }]
+    },
+    yAxis: {
+        className: 'highcharts-color-0',
+        title: {
+            text: 'Cantidad de autores'
+        }
+    },
+    series: [{
+        type: 'column',
+        name: 'Revisiones',
+        data: [8, 9, 4, 7, 6, 7]
+    }, {
+        type: 'column',
+       name: 'Trabajos originales',
+        data: [10, 16, 14, 15, 21, 23]
+    }, {
+        type: 'pie',
+        name: 'Total por género',
+        data: [{
+            name: '29.2%',
+            y: 41,
+            color: Highcharts.getOptions().colors[0] // Jane's color
+        }, {
+            name: '70.8%',
+            y: 99,
+            color: Highcharts.getOptions().colors[1] // John's color
+        }],
+        center: [500, 5],
+        size: 100,
+        showInLegend: false,
+        dataLabels: {
+          enabled: true
+        }
+    }]
+});
+
+		</script>
+        </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+        </footer>
+    </head>
+</body>
+</html>
