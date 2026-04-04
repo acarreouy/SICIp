@@ -1,16 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graficas</title>
-</head>
-<body>
-    <h1>Graficas</h1>
-    <p>Check out our live graphs at <a href="https://acarreouy.github.io/SICIp/Graficas/graph1">Graph 1</a>.</p>
-    <p>For local development, you can use <a href="https://acarreouy.github.io/SICIp/Graficas/graph2">Graph 2</a>.</p>
-    <footer>
-        <p>Visit us at <a href="https://acarreouy.github.io/SICIp/Graficas/">Our GitHub Pages</a>.</p>
-    </footer>
+<meta charset="utf-8">
+<title>Estudios bibliométricos</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<link rel="stylesheet" href="https://acarreouy.github.io/SICIp/ArchivosCSS/fontello.css">
+<link rel="stylesheet" href="https://acarreouy.github.io/SICIp/ArchivosCSS/estilos.css">
+<b><hr></hr></b>
+<body bgcolor="#BFBFBF" TEXT="#08088A">
+<header>
+    <div class="contenedor">
+        <h1 class="icon-gauge">Estudio sobre PCS</h1>
+<! ––input nos permite mostrar y ocultar el menu trabajando con menu.css-->
+        <input type="checkbox" id="menu-bar">
+<! ––label activo o desactiva el input del menu-bar-->
+        <label class="icon-menu" for="menu-bar"> </label>
+    <nav class="menu">
+<!---BUscador---->
+    <a>
+       <form action="buscar.php" method="post">
+            <input type="text" name="criterio" placeholder="Criterio de búsqueda">
+            <input type="submit" name="name" value="buscar">
+        </form>
+        </a>
+<!--Fin busca-->
+        <a href="https://acarreouy.github.io/SICIp/index.html">Inicio</a>
+        <a href="https://acarreouy.github.io/SICIp/Graficas.html">Graficas</a>
+    </nav>    
+    </div>
+    </header>
+<main>
+<br><br><br>
+    <section>
+        <div class="contenedor">
+En esta sección enlazamos las gráficas resultado de consultas sql a la base de datos del proyecto.
+<br>
+Estas gráficas que corren sobre Highchart.
+<ul><br>
+<li><a href="http://localhost/Base_php/Tipos_Art.htm">Cantidad de artículos discriminada por el tipo</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Porcentaje_Autores_Tipo.htm">Porcentaje de autores por tipo de artículo</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Autoria_y_Promedio.html">Distribución de autoria</a></li>
+<br>
+<li><a href="http://localhost/Base_php/ADUAL.htm">Vida media y perdidad de utilidad</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Firmas.html">Cantidad de firmas por tipo de artículos</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Lotka.htm">Lotka</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Firmas_Art.html">Evolución de la cantidad de firmas en el periodo</a></li>
+<br>
+<li><a href="http://localhost/Base_php/autocitas.htm">Autocitas</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Idiomas.html">Idioma de los artículos</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Idioma_Art_Año.html">Evolución anual del idioma de los artículos</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Redes_Paises.htm">Redes de colaboración</a></li>
+<br>
+<li><a href="http://localhost/Base_php/aaa.htm">Índice de colaboración institucional</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Price.htm">Índice de Price</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Price_5años.html">Price</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Bradford_log.htm">Gráfica Logarítmica de Bradford</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Genero_Paises.html">Género por paises</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Genero_Aut_con_num.htm">Distribución de género por año</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Factor_Envejecimiento.html">Factor de envejecimiento anual</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Idioma_refe.htm">Idioma de las referencias</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Indice_de_aislamiento.html">Indice de aislamiento</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Inmediatez.html">Indice de inmediatez</a></li>
+<br>
+<li><a href="http://localhost/Base_php/Nube.htm">Nube de palabras clave</a></li>
+</ul>
+       </div>
+    </section>
+    </main>  
+<footer>
+    <div class="contenedor">
+        <p class="copy">Mi página &copy; 2021</p>
+        <div class="sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-tumblr-squared" href="#"></a>
+            <a class="icon-mail-squared" href="mailto:acarrouy@gmail.com" target="_blank"></a>
+            <a class="icon-linkedin-squared" href="#"></a>
+            <a class="icon-rss-squared" href="#"></a>
+        </div>
+    </div>
+</footer>
 </body>
+</head>
 </html>
